@@ -13,6 +13,7 @@
   import { GameState, loadLevel, saveLevel } from "../../../data/storage";
   import PageHeader from "../../../components/PageHeader.svelte";
   import InstructionModal from "./InstructionModal.svelte";
+  import { base } from "$app/paths";
 
   export let data: PageData;
 
@@ -103,7 +104,7 @@
 </script>
 
 <div class="content">
-  <a class="back-link" href="/">{"< levels"}</a>
+  <a class="back-link" href={`${base}/`}>{"< levels"}</a>
 
   <PageHeader />
 

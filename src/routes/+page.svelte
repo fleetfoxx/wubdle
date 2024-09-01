@@ -4,6 +4,7 @@
   import { GameState, getAllLevels, type SaveData } from "../data/storage";
   import { isWin } from "../utilities/stringUtilities";
   import PageHeader from "../components/PageHeader.svelte";
+  import { base } from "$app/paths";
 
   let phraseLookup: Map<string, GameState> = new Map();
 
@@ -32,7 +33,7 @@
 
   <div class="level-link-wrapper">
     {#each phrases as phrase, index}
-      <a class={`level-link state-${phraseLookup.get(phrase)}`} href={`/level/${index + 1}`}>{index + 1}</a>
+      <a class={`level-link state-${phraseLookup.get(phrase)}`} href={`${base}/level/${index + 1}`}>{index + 1}</a>
     {/each}
   </div>
 </div>
