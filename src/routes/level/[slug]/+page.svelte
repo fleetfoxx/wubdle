@@ -60,9 +60,7 @@
 
       if (isWin(attemptResult)) {
         gameState = GameState.Win;
-      }
-
-      if (attemptIndex + 1 < MAX_ATTEMPTS) {
+      } else if (attemptIndex + 1 < MAX_ATTEMPTS) {
         attemptIndex++;
       } else {
         gameState = GameState.Lose;
